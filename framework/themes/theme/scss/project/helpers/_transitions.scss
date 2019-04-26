@@ -1,0 +1,11 @@
+%transition-all {
+	transition: all 200ms ease;
+}
+
+%transition-all--swing {
+	transition: all 200ms cubic-bezier(0.905, 0.165, 0.54, 0.875);
+}
+
+%transition-all--swing-slow{
+	transition: all 550ms cubic-bezier(0.905, 0.165, 0.54, 0.875);
+}

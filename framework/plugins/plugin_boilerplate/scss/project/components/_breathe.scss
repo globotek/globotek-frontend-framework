@@ -1,0 +1,19 @@
+.gts-breathe {
+	
+	&:not([class*="breathe--"]) {
+		margin: $gutter 0;
+	}
+	
+	&--top {
+		margin-top: $gutter;
+	}
+	
+	&--bottom {
+		margin-bottom: $gutter;
+	}
+	
+	&--bottom-mini {
+		margin-bottom: $gutter--mini;
+	}
+	
+}

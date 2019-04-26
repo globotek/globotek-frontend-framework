@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    FONT-FACE DECLARATIONS
+\*------------------------------------*/
+$base-font-family: 'montserratregular', Helvetica, Arial, sans-serif;
+$title-font-family: 'truenoregular', Helvetica, Arial, sans-serif;
+$heading-font-family: 'truenosemibold', Helvetica, Arial, sans-serif;
+
+/*------------------------------------*\
+    TYPOGRAPHY
+\*------------------------------------*/
+$base-font-size: 15px;
+
+$base-font-family: $base-font-family;
+$heading-font-family: $heading-font-family;
+$title-font-family: $title-font-family;
+
+$loose-line-height-ratio: 2.2;
+$base-line-height-ratio: 1.7;
+$tight-line-height-ratio: 1.18;

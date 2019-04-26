@@ -1,0 +1,16 @@
+%form-field {
+
+	@include form-field();
+	@include font-size($base-font-size, true);
+
+	&:focus {
+	}
+
+	&.is-error {
+		border-color: $negative-color;
+		color: $negative-color--mid;
+		background: lighten($negative-color, 40%);
+
+		@include placeholder($negative-color--mid);
+	}
+}

@@ -1,0 +1,16 @@
+.list{
+	
+	@include mode('global'){
+	
+		
+		&__item{
+			
+			&:before {
+				content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+			}
+			
+		}
+		
+	}
+	
+}

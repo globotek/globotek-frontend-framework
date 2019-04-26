@@ -1,0 +1,18 @@
+.form{
+
+	@include mode('global'){
+    
+        &__field {
+
+            @extend %form-field;
+
+        }
+
+        &__textarea {
+            
+            @extend %form-field;
+
+        }
+    
+    }
+}

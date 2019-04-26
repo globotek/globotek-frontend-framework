@@ -1,0 +1,44 @@
+%heading-base {
+    font-family: $heading-font-family;
+	text-transform: capitalize;
+}
+
+%heading-primary {
+	@extend %heading-base;
+
+	@include font-size(15px, true, false, $tight-line-height-ratio);
+
+	@include media-query("lap-and-up") {
+		@include font-size(18px, true, false, $tight-line-height-ratio);
+	}
+}
+
+%heading-secondary {
+	@extend %heading-base;
+
+	@include font-size(12px, true, false, $tight-line-height-ratio);
+
+	@include media-query("lap-and-up") {
+		@include font-size(15px, true, false, $tight-line-height-ratio);
+	}
+}
+
+%heading-tertiary {
+	@extend %heading-base;
+
+	@include font-size(15px, true, false, $base-line-height-ratio);
+
+	@include media-query("lap-and-up") {
+		@include font-size(15px, true, false, $base-line-height-ratio);
+	}
+}
+
+%heading-quaternary {
+	@extend %heading-base;
+
+	@include font-size(12px, true, false, $tight-line-height-ratio);
+
+	@include media-query("lap-and-up") {
+		@include font-size(14px, true, false, $tight-line-height-ratio);
+	}
+}

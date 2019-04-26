@@ -1,0 +1,51 @@
+.breathe{
+	
+	@include mode('global'){
+		
+		$breathe-space: 30px;
+		
+		&:not([class*="breathe--"]){
+			margin-top: $breathe-space;
+			margin-bottom: $breathe-space;
+		}
+		
+		&--treble{
+			margin-top: ($breathe-space * 3);
+			margin-bottom: ($breathe-space * 3);
+		}
+		
+		&--mini{
+			margin-top: ($breathe-space / 3);
+			margin-bottom: ($breathe-space / 3);
+		}
+		
+		&--top{
+			margin-top: $breathe-space;
+		}
+		
+		&--top-mini{
+			margin-top: ($breathe-space / 2);
+		}
+		
+		&--top-treble{
+			margin-top: ($breathe-space * 3);
+		}
+		
+		&--bottom{
+			margin-bottom: $breathe-space;
+		}
+		
+		&--bottom-mini{
+			margin-bottom: ($breathe-space / 2);
+		}
+		
+		&--bottom-double{
+			margin-bottom: ($breathe-space * 2);
+		}
+		
+		&--bottom-treble{
+			margin-bottom: ($breathe-space * 3);
+		}
+	}
+	
+}

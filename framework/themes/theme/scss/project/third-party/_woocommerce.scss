@@ -1,0 +1,251 @@
+.woocommerce{
+	
+	@include mode('global'){
+
+        padding: $gutter--treble 0;
+
+        h2, h3 {
+
+            @extend %title-quaternary;
+
+        }
+
+        table {
+            border-spacing: 0px;
+            border-radius: $radius--double;
+            @extend %box-shadow;
+            border-width: 0px !important;
+
+            th, td {
+    
+                padding: 18px 12px !important;
+
+            }
+
+            &.cart, &.woocommerce-checkout-review-order-table thead {
+                margin-bottom: $gutter--treble !important;
+
+                tr {
+
+                    th {
+                        
+                        @extend %heading-base;
+    
+                        vertical-align: top;
+                        background: $primary-color;
+                        color: $white;
+                        font-weight: bold;
+                        
+                    }
+    
+                    &:first-child {
+    
+                        th {
+        
+                            &:first-child {
+        
+                                border-radius: $radius--double 0 0 0;
+        
+                            }
+        
+                            &:last-child {
+        
+                                border-radius: 0 $radius--double 0 0;
+        
+                            }
+                                
+                        }
+    
+                    }
+    
+                }
+    
+            }
+
+            tfoot {
+                th {
+                    background: $grey--mid;
+                    color: $white;
+
+                }
+
+                tr {
+                    &:first-child {
+                        th {
+                            border-radius: 0 !important;
+                        }
+                    }
+
+                    &:last-child {
+
+                        th {
+        
+                            &:first-child {
+        
+                                border-radius: 0 0 0 $radius--double;
+        
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            input {
+
+                &.qty {
+
+                    text-align: center;
+                    width: 70px !important;
+                    //padding: $gutter--mini;
+
+                }
+
+                &#coupon_code {
+                    
+                    width: 150px;
+
+                }
+
+            }
+
+        }
+
+        .cart_totals, .woocommerce-checkout-review-order {
+
+            table {
+
+                border-radius: $radius--double;
+                margin-bottom: $gutter--treble !important;
+
+                tr {
+
+                    th {
+
+                        background: $grey--mid;
+                        color: $white;
+
+                    }
+
+                    &:first-child {
+    
+                        th {
+        
+                            &:first-child {
+        
+                                border-radius: $radius--double 0 0 0;
+        
+                            }
+        
+                            &:last-child {
+        
+                                border-radius: 0 $radius--double 0 0;
+        
+                            }
+                                
+                        }
+    
+                    }
+
+                    &:last-child {
+
+                        th {
+        
+                            &:first-child {
+        
+                                border-radius: 0 0 0 $radius--double;
+        
+                            }
+        
+                            &:last-child {
+        
+                                border-radius: 0 $radius--double 0 0;
+        
+                            }
+                                
+                        }
+    
+                    }
+
+                }
+
+            }
+
+        }
+
+        .form-row {
+            margin: 0 0 $gutter 0 !important;
+        }
+
+        .button, .wc-proceed-to-checkout a {
+
+            font-size: 13px !important;
+            color: $white !important;
+            background-color: $primary-color !important;
+            padding: 12px $gutter--midi !important;
+            border-radius: $gutter--midi !important;
+            @extend %box-shadow-secondary;
+
+        }
+
+        input {
+
+            &.input-text {
+
+                @extend %form-field;
+                border: $grey--mid solid 1px;
+                height: auto;
+
+            }
+
+        }
+
+        .woocommerce-billing-fields, .notes, .checkout_coupon {
+
+            input, .select2-selection, .input-text {
+                
+                padding: 15px;
+                height: auto;
+                border: $grey--mid solid 1px;
+                border-radius: 26px;
+
+            }
+
+            .select2-selection {
+                padding: 0 15px;
+                height: 52px;
+                line-height: 52px;
+
+                .select2-selection__rendered {
+                    line-height: 50px;
+                }
+
+                .select2-selection__arrow {
+                    right: 18px;
+                    top: 12px;
+                }
+            }
+
+        }
+
+        .woocommerce-billing-fields, .woocommerce-additional-fields {
+            &__field-wrapper {
+                margin: $gutter--midi 0;
+            }
+        }
+
+        .woocommerce-checkout-review-order {
+            margin: $gutter--midi 0;
+        }
+
+        a {
+            color: $primary-color;
+        }
+        
+        .woocommerce-info {
+            border-top-color: $primary-color;
+        }
+        
+	}
+	
+}

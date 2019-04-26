@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    FORM FIELD
+    
+    Some useful base form field styles.   
+\*------------------------------------*/
+@mixin form-field() {
+	-webkit-appearance: none;
+	display: inline-block;
+	font-family: $base-font-family;
+
+	&:focus, 
+	&:valid, 
+	&.is-filled {
+		outline: none;
+	}
+}

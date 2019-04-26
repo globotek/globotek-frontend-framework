@@ -1,0 +1,32 @@
+.chunk {
+	
+	@include mode("global") {
+
+		display: block;
+
+		&:not([class*="chunk--"]) {
+			margin: $gutter 0;
+		}
+
+		&--mini {
+			margin: $gutter--mini 0;
+		}
+
+		&--midi {
+			margin: $gutter--midi 0;
+		}
+
+		&--double {
+			margin: $gutter--double 0;
+		}
+
+		&--treble {
+			margin: $gutter--treble 0;
+		}
+
+		& + & {
+			margin-top: 0;
+		}
+
+	}
+}

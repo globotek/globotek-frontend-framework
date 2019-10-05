@@ -24,6 +24,7 @@ var gulp        = require('gulp'),
 var THEMES  = [];
 var PLUGINS = [];
 
+
 var PROJECT_DIRECTORIES = {
 	themes:  THEMES,
 	plugins: PLUGINS
@@ -36,7 +37,8 @@ gulp.task('default', function () {
 		sync.init({
 			https:       false,
 			open:        true,
-			reloadDelay: 50
+			reloadDelay: 50,
+			ghostMode: false
 		});
 		
 	});
@@ -81,9 +83,10 @@ gulp.task('default', function () {
 			WATCHERS['svg'].push(PROJECT_SVG);
 			
 			WATCHERS['scripts'].push('global/scripts/_helpers.js');
+			WATCHERS['scripts'].push('global/scripts/lib/*.js');
 			WATCHERS['scripts'].push(PROJECT_SCRIPTS + '/modules/*.js');
 			WATCHERS['scripts'].push(PROJECT_SCRIPTS + '/app.js');
-						
+			
 			WATCHERS['php'].push(DESTINATION_PHP);
 			
 			
@@ -95,18 +98,17 @@ gulp.task('default', function () {
 		
 	}
 	
-	//console.log(PATHS);
 	gulp.task('process_scss', function () {
 		
 		PATHS['css'].forEach(function (CSS) {
 			
 			for (var INDEX in CSS) {
-				
-				return gulp.src(CSS[INDEX]['source'])
+				console.log(INDEX);
+				gulp.src(CSS[INDEX]['source'])
 				.pipe(sass().on('error', sass.logError))
 				.pipe(sourcemaps.init())
 				.pipe(autoprefix({
-					browsers: ['last 2 versions'],
+					overrideBrowserslist: ['last 2 versions'],
 					cascade:  false
 				}))
 				.pipe(minify_css())
@@ -128,7 +130,7 @@ gulp.task('default', function () {
 			
 			for (var INDEX in SVG) {
 				
-				return gulp.src(SVG[INDEX]['source'])
+				gulp.src(SVG[INDEX]['source'])
 				//.pipe(minify_svg())
 				.pipe(svg_symbols())
 				.pipe(gulp.dest(SVG[INDEX]['destination']));
@@ -165,7 +167,7 @@ gulp.task('default', function () {
 			
 			for (var INDEX in SCRIPT) {
 				
-				return gulp.src(sources)
+				gulp.src(sources)
 				.pipe(concat('lib.js'))
 				//.pipe(uglify())
 				.pipe(gulp.dest(SCRIPT[INDEX]['destination']));
@@ -194,10 +196,10 @@ gulp.task('default', function () {
 				
 				gulp.start('process_script_libraries');
 				
-				return gulp.src(sources)
+				gulp.src(sources)
 				.pipe(sourcemaps.init())
 				.pipe(concat(INDEX + '.js'))
-				//.pipe(uglify())
+				
 				.pipe(sourcemaps.write('.'))
 				.pipe(gulp.dest(SCRIPT[INDEX]['destination']));
 				
@@ -207,7 +209,6 @@ gulp.task('default', function () {
 		
 	});
 	
-	console.log(WATCHERS['scripts']);
 	sequence('process_scss', 'process_svg', 'delete_svg_css', 'process_scripts', function () {
 		
 		gulp.watch(WATCHERS['scss'], ['process_scss']);

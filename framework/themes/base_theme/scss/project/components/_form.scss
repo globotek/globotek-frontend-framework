@@ -1,0 +1,51 @@
+.form{
+	
+	@include mode('global'){
+
+		@extend %grid;
+		@extend %grid--halves;
+		
+		grid-gap: $gutter--mini;
+		
+		&__group{
+			
+			grid-column: span 12;
+			
+			@extend %flex-wrapper--column;
+			
+			&--inline {
+				
+				grid-column: span 6;
+				
+			}
+		
+		}
+		
+		
+		&__label{
+		
+			@include form-label();
+		
+		}
+		
+		&__input{
+			
+			@include form-field();
+		
+		}
+		
+		&__multiline{
+			
+			@include form-field();
+		
+		}
+		
+		&__submit{
+		
+			@include form-submit();
+		
+		}
+	
+	}
+	
+}

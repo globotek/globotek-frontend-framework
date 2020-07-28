@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    CONTENT FLOW
+    
+    A little tool to help us with content flow
+    and namespacing issues
+\*------------------------------------*/
+@mixin content-flow($selector: "") {
+
+	@if($selector == "") {
+		& + & {
+			@content;
+		}
+	}
+	@else {
+		& + #{$selector} {
+			@content;
+		}
+	}
+}

@@ -1,0 +1,41 @@
+.chunk {
+	
+	@include mode("global") {
+
+		&:not([class*="grid"]) {
+			
+			display: block;
+			
+		}
+		
+		&:not([class*="chunk--"]) {
+			padding-top: $gutter;
+			padding-bottom: $gutter;
+		}
+
+		&--mini {
+			padding-top: $gutter--mini;
+			padding-bottom: $gutter--mini;
+		}
+
+		&--midi {
+			padding-top: $gutter--midi;
+			padding-bottom: $gutter--midi;
+		}
+
+		&--double {
+			padding-top: $gutter--double;
+			padding-bottom: $gutter--double;
+		}
+
+		&--treble {
+			padding-top: $gutter--treble;
+			padding-bottom: $gutter--treble;
+		}
+
+		& + & {
+			padding-top: inherit;
+		}
+
+	}
+}

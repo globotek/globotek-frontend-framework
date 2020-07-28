@@ -1,0 +1,23 @@
+%heading-primary{
+
+	@include font-size(30px, true, false, $heading-line-height-ratio);
+	
+}
+
+%heading-secondary{
+
+	@include font-size(26px, true, false, $heading-line-height-ratio);
+	
+}
+
+%heading-tertiary{
+
+	@include font-size(22px, true, false, $heading-line-height-ratio);
+	
+}
+
+%heading-quaternary {
+	
+	@include font-size($base-font-size, true, false, $heading-line-height-ratio);
+	
+}

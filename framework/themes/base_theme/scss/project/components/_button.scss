@@ -1,0 +1,24 @@
+.button{
+	
+	@include mode('global'){
+	
+		@include button();
+		
+		background: $neutral-color;
+		color: $white;
+		
+		&--positive{
+			
+			background: $positive-color;
+			
+		}
+		
+		&--negative{
+			
+			background: $negative-color;
+			
+		}
+		
+	}
+	
+}

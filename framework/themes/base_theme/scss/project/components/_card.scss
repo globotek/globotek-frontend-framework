@@ -1,0 +1,16 @@
+.card{
+	
+	@include mode('global'){
+	
+		@extend %flex-wrapper;
+		
+		padding: $gutter;
+		border-radius: $radius;
+	
+		color: #DFDFDF;
+		background: #191919;
+		
+		
+	}
+	
+}

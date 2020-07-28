@@ -60,8 +60,8 @@ register_nav_menus(array(
 ));
 
 
-if (is_plugin_active('gravityforms/gravityforms.php')) {
-
+if ( class_exists( 'GFCommon' ) ) {
+    
     function gtek_form_submit_button($button, $form) {
 
         return "<button class='button button--positive gform_button form__submit' id='gform_submit_button_{$form['id']}'><span>Send</span></button>";

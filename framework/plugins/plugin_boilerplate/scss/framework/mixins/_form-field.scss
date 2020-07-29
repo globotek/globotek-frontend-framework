@@ -3,14 +3,37 @@
     
     Some useful base form field styles.   
 \*------------------------------------*/
+@mixin form-label(){
+
+	padding-right: $gutter--mini;
+	white-space: nowrap;
+	font-family: $base-font-family;
+	
+	@include font-size($base-font-size, true, true, $base-line-height-ratio);
+	
+}
+
+
 @mixin form-field() {
-	-webkit-appearance: none;
+	
+	padding: 3px 2px;
+
 	display: inline-block;
 	font-family: $base-font-family;
-
+	
 	&:focus, 
 	&:valid, 
 	&.is-filled {
 		outline: none;
 	}
+	
+}
+
+
+@mixin form-submit(){
+	
+	@include button();
+	
+	margin-top: 5px;
+	
 }

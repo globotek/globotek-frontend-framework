@@ -2,30 +2,39 @@
 	
 	@include mode("global") {
 
-		display: block;
-
+		&:not([class*="grid"]) {
+			
+			display: block;
+			
+		}
+		
 		&:not([class*="chunk--"]) {
-			padding: $gutter 0;
+			padding-top: $gutter;
+			padding-bottom: $gutter;
 		}
 
 		&--mini {
-			padding: $gutter--mini 0;
+			padding-top: $gutter--mini;
+			padding-bottom: $gutter--mini;
 		}
 
 		&--midi {
-			padding: $gutter--midi 0;
+			padding-top: $gutter--midi;
+			padding-bottom: $gutter--midi;
 		}
 
 		&--double {
-			padding: $gutter--double 0;
+			padding-top: $gutter--double;
+			padding-bottom: $gutter--double;
 		}
 
 		&--treble {
-			padding: $gutter--treble 0;
+			padding-top: $gutter--treble;
+			padding-bottom: $gutter--treble;
 		}
 
 		& + & {
-			padding-top: 0;
+			padding-top: inherit;
 		}
 
 	}

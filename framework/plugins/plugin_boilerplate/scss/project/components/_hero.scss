@@ -1,0 +1,36 @@
+.hero{
+	
+	@include mode('global'){
+		
+		@extend %flex-wrapper;
+		
+		justify-content: center;
+		position: relative;
+		height: 600px;
+		overflow: hidden;
+		
+		&__bg{
+			
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			transform: translateY(-50%);
+			
+		}
+		
+		&__inner {
+			
+			@extend %flex-wrapper;
+			
+			justify-content: center;
+			align-items: center;
+			width: $site-max-width;
+			padding: 0 $gutter;
+			z-index: 100;
+			
+		}
+	
+	}
+	
+}

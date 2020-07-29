@@ -1,0 +1,34 @@
+%title {
+	
+	font-family: $title-font-family;
+	font-weight: normal;
+	
+}
+
+%title-primary{
+	
+	@include font-size(40px, true, false, $title-line-height-ratio);
+	
+}
+
+
+%title-secondary{
+	
+	@include font-size(34px, true, false, $title-line-height-ratio);
+	
+	
+}
+
+
+%title-tertiary{
+	
+	@include font-size(28px, true, false, $title-line-height-ratio);
+	
+}
+
+
+%title-quaternary{
+	
+	@include font-size(20px, true, false, $title-line-height-ratio);
+	
+}

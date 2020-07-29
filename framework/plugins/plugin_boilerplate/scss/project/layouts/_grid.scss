@@ -1,0 +1,29 @@
+.grid {
+
+	@extend %grid;
+	
+	grid-gap: $gutter;
+	
+	&--halves{
+		
+		@extend %grid--halves;
+		
+	}
+	
+	&--fifths {
+		
+		@extend %grid--fifths;
+		
+	}
+	
+	&__item{
+		
+		&__wide{
+			
+			grid-column: span 2;
+			
+		}
+		
+	}
+	
+}

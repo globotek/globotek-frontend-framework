@@ -4,10 +4,12 @@
     Some useful base button styles.   
 \*------------------------------------*/
 @mixin button() {
+	
 	display: inline-block;
+	width: fit-content;
+	padding: 5px 12px;
 	cursor: pointer;
-	position: relative;
-	-webkit-appearance: none;
+	border: none;
 
 	@include hover(true) {
 		outline: none;

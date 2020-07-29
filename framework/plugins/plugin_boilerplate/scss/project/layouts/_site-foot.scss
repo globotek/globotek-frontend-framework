@@ -2,6 +2,24 @@
 	
 	@include mode("global") {
 
+		width: 100%;
+		background: $primary-bg-color;
+		color: $white;
+		
+		&__inner{
+			
+			@extend .wrapper;
+			@extend %grid;
+			@extend %grid--quarters;
+			
+		}
+		
+		&__column{
+			
+			@extend %grid__item__left;
+			
+		}
+		
 	}
 	
 }

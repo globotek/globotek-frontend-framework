@@ -17,10 +17,10 @@ $radius--treble: ($radius * 3);
 /*------------------------------------*\
     BREAKPOINTS
 \*------------------------------------*/
-$breakpoint--palm: "(max-width: 683px)";
-$breakpoint--portable: "(max-width: 999px)";
+$breakpoint--palm: "(max-width: 768px)";
+$breakpoint--portable: "(max-width: 1024px)";
 $breakpoint--portable-and-up: "(min-width: 400px)";
-$breakpoint--lap: "(min-width: 684px) and (max-width: 999px)";
-$breakpoint--desk: "(min-width: 1000px)";
+$breakpoint--lap: "(min-width: 768px) and (max-width: 1024px)";
+$breakpoint--desk: "(min-width: 1025px)";
 $breakpoint--desk--wide: "(min-width: 1300px)";
-$breakpoint--lap-and-up: "(min-width: 684px)";
+$breakpoint--lap-and-up: "(min-width: 768px)";
